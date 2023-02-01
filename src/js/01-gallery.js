@@ -15,11 +15,6 @@ new SimpleLightbox('.gallery a', {
   captionDelay: 250,
 });
 
-galleryList.addEventListener('click', onGalleryListClick);
-function onGalleryListClick(event) {
-  event.preventDefault();
-}
-
 function createGalleryItemsMarkup(galleryItems) {
   return galleryItems
     .map(
