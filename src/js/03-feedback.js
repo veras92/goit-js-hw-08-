@@ -1,4 +1,4 @@
-import { throttle } from 'lodash.throttle';
+import throttle from 'lodash.throttle';
 
 const refs = {
   form: document.querySelector('.feedback-form'),
@@ -22,6 +22,7 @@ function onFormInput(event) {
 function onFormSubmit(event) {
   event.preventDefault();
   localStorage.removeItem(STORAGE_KEY);
+  console.log(formData);
   event.target.reset();
   formData = {};
 }
